@@ -51,58 +51,59 @@ class WorkShop extends StatelessWidget {
               fit: BoxFit.fill, 
             ),
             ),
-            child: Stack( //stack utk membuat banyak tumpukan gambar dan tulisan-tulisan
+            ),
+            Column(
               children: [
-                Column(
-                  children: [
-                    Stack(
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 50),
+                    child: Column(
                       children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(vertical: 40, horizontal: 50),
-                          width:300,//gambar muka yang direkonstruksi ukuran lebarnya
-                          height:300,//gambar muka yang direkonstruksi ukuran tingginya
-                          child: Image.asset("assets/images/montircewe.png",
-                          fit: BoxFit.cover //untuk membuat gambar menyesuaikan dengan ukuran boxnya
-                          )
-                          ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: 50,
-                              height: 50,
-                              child: Image.asset("assets/icons/module.png"), 
-                            ),
-                            SizedBox(height: 15),
-                            Column(
+                            Stack(
                               children: [
-                                Text("Modules",
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                color: Color(0xFFFFD55F),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17)),
-                                
-                                Text("Materi belajar yang disusun secara sistematis\ndan terstruktur untuk membantu  memahami\ndasar-dasar perbaikan kendaraan.",
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 11)
+                                Container(
+                                  //margin: EdgeInsets.symmetric(vertical: 40, horizontal: 50),
+                                  width:300,//gambar muka yang direkonstruksi ukuran lebarnya
+                                  height:300,//gambar muka yang direkonstruksi ukuran tingginya
+                                  child: Image.asset("assets/images/montircewe.png",
+                                  fit: BoxFit.cover //untuk membuat gambar menyesuaikan dengan ukuran boxnya
+                                  )
+                                  ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.symmetric(vertical: 240),
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset("assets/icons/module.png"),
+                                      ),
+                                      Column(
+                                        children: [
+                                          Text("Modules",
+                                          style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17),
+                                          ),
+                                          Text("Materi belajar yang disusun secara sistematis\ndan terstruktur untuk membantu  memahami\ndasar-dasar perbaikan kendaraan.",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 11)
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                      ],
                     ),
-                  ], 
+              ],
+            ),
+                ], 
                 ),
-                 ],
-               ),
-           )
-           ]
-           )
-    );
+               );
   }
 }
