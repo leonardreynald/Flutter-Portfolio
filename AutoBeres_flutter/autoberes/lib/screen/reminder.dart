@@ -66,7 +66,6 @@ class Reminder extends StatelessWidget {
                           height: 55,
                           child: Image.asset("assets/images/gambaroli.png"),
                           ),
-                          
                           Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
